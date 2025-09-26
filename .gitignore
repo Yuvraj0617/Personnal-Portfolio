@@ -29,7 +29,7 @@ backend/build/
 # Env files
 # ========================
 *.local
-frontend/src/.env
+frontend/.env
 backend/.env
 
 
