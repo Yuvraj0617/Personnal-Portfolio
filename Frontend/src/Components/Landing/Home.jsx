@@ -41,7 +41,7 @@ export default function Home() {
             <Link to="Contact" smooth={true} duration={300}>
               <button className='bg-amber-500  hover:scale-105 hover:text-gray-50 text-xl font-semibold md:text-2xl cursor-pointer px-4 py-2 rounded-md'>Contact Me</button>
             </Link>
-            <a href="#" >
+            <a href="https://drive.google.com/file/d/1GDtzoGOjjivi3jLfmVljoRxsaaDj63uu/view?usp=sharing" >
               <button
                className='bg-amber-500 text-xl md:text-2xl hover:scale-105 hover:text-gray-50 font-semibold cursor-pointer px-4 py-2 rounded-md'
                >My Resume </button>
