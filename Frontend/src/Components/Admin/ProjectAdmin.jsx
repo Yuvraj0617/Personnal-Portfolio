@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import Axios from 'axios';
+import base_url from '../../../utils/Backendcall';
 import { toast } from 'react-toastify';
 import { DataContext } from '../../Context/AllData'
 import { useContext } from 'react'
@@ -18,7 +19,7 @@ export default function ProjectAdmin() {
       formData.append('techStack', data.techStack);
       formData.append('projectLink', data.projectLink);
 
-      const response = await Axios.post('/api/admin/projects', formData, {
+      const response = await Axios.post(`${base_url}/api/admin/projects`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -34,7 +35,7 @@ export default function ProjectAdmin() {
 
   const RemoveData=async (data) => {
       try{
-      const response = await Axios.delete(`/api/admin/projects/${data._id}`);
+      const response = await Axios.delete(`${base_url}/api/admin/projects/${data._id}`);
       console.log('Success:', response.data);
       toast.success('Removed successfully!');
     }

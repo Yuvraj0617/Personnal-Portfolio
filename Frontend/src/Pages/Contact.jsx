@@ -2,12 +2,13 @@ import { useForm } from 'react-hook-form';
 import ContactMsg from '../Components/Contact/ContactMsg';
 import Axios from 'axios';
 import { toast } from 'react-toastify';
+import base_url from '../../utils/Backendcall';
 import SocialMedia from '../Components/Contact/SocialMedia';
 export default function Contact() {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = async (data) => {
         try {
-            const response = await Axios.post('/api/contact', data);
+            const response = await Axios.post(`${base_url}/api/contact`, data);
             console.log('Success:', response.data);
             toast.success('Message sent successfully!');
             reset();

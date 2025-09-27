@@ -1,6 +1,7 @@
 
 import { useForm } from 'react-hook-form';
 import Axios from 'axios';
+import base_url from '../../../utils/Backendcall';
 import { toast } from 'react-toastify'
 import { FaCalendarAlt } from "react-icons/fa"
 import { useContext } from 'react';
@@ -14,7 +15,7 @@ export default function EduAdmin() {
 
   const RemoveData=async (data) => {
     try{
-    const response = await Axios.delete(`/api/admin/education/${data._id}`);
+    const response = await Axios.delete(`${base_url}/api/admin/education/${data._id}`);
     console.log('Success:', response.data);
     toast.success('Removed successfully!');
   }
@@ -26,7 +27,7 @@ export default function EduAdmin() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await Axios.post('/api/admin/education', data);
+      const response = await Axios.post(`${base_url}/api/admin/education`, data);
       console.log('Success:', response.data);
       toast.success('Updated successfully!');
     } catch (error) {

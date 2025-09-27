@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
+import base_url from '../../../utils/Backendcall';
 import { toast } from 'react-toastify';
 export default function Overview() {
   const { register, handleSubmit } = useForm();
@@ -11,7 +12,7 @@ export default function Overview() {
 
   const GetData = async () => {
     try {
-      const res = await Axios.get(`/api/admin/overview/`);
+      const res = await Axios.get(`${base_url}/api/admin/overview/`);
       const overviewData = res.data[0]; 
       setHeadline(overviewData.headline);
       setBio(overviewData.bio);
@@ -36,7 +37,7 @@ export default function Overview() {
       bio: data.bio || bio
     };
     try {
-      const response = await Axios.patch(`/api/admin/overview/${id}`, updateData);
+      const response = await Axios.patch(`${base_url}/api/admin/overview/${id}`, updateData);
       console.log("Update:", response.data);
       toast.success("Overview updated successfully!");
     } catch (error) {
