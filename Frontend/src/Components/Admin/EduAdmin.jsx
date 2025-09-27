@@ -1,4 +1,3 @@
-
 import { useForm } from 'react-hook-form';
 import Axios from 'axios';
 import base_url from '../../../utils/Backendcall';
@@ -17,7 +16,7 @@ export default function EduAdmin() {
     try{
     const response = await Axios.delete(`${base_url}/api/admin/education/${data._id}`);
     console.log('Success:', response.data);
-    toast.success('Removed successfully!');
+    toast.success('Removed successfully!'); 
   }
   catch (error) {
     console.log(error)
