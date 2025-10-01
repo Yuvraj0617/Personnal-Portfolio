@@ -15,7 +15,7 @@ connectdb();
 app.use(Express.json());
 app.use(cors(
     {
-        origin: [process.env.Frontend_URL],
+        origin: [process.env.Frontend_URL, "http://localhost:5173/"],
         credentials: true
     }
 ));
