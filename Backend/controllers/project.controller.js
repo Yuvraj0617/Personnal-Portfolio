@@ -1,4 +1,4 @@
-import Project from "../models/project.model.js";
+import Project from "../models/projects.model.js";
 import { uploadImage } from "../utils/cloundinary.utils.js";
 
 const createProject = async (req, res) => {

@@ -1,5 +1,5 @@
 import Overview from "../models/overview.model.js";
-import Project from "../models/project.model.js";
+import Project from "../models/projects.model.js";
 import Education from "../models/education.model.js";
 import nodemailer from "nodemailer";
 
