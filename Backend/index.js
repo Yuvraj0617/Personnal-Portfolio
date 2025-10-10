@@ -15,7 +15,7 @@ connectdb();
 app.use(Express.json());
 app.use(cors(
     {
-        origin: [process.env.Frontend_URL, "https://yubraj-sapkota-fxoo.onrender.com"],
+        origin: [process.env.Frontend_URL, "https://yubraj-sapkota-fxoo.onrender.com", "http://localhost:5173"],
         credentials: true
     }
 ));
