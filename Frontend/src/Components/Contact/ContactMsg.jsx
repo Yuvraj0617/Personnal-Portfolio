@@ -22,7 +22,7 @@ export default function ContactMsg() {
                     </div>
                     <div className='text-neutral-50'>
                         <p className='text-xl font-bold'>Whatsapp</p>
-                        <span className='md:text-xl text-sm'>+91 9876543210</span>
+                        <span className='md:text-xl text-sm'>+91 9266826572</span>
                     </div>
                 </div>
 
