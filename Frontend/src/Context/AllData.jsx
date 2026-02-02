@@ -12,7 +12,7 @@ const DataProvider = ({ children }) => {
   const getData = async () => {
     setLoading(true);
     try {
-      const response = await Axios.get(`${base_url}/api/`);
+      const response = await Axios.get(`${base_url}api/`);
       if (response.status !== 200) {
         throw new Error('Network response was not ok');
       }
